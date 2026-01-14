@@ -2,7 +2,7 @@
 name = "solana-svm-test-harness"
 description = "Solana SVM test harness."
 documentation = "https://docs.rs/solana-svm-test-harness"
-version = { workspace = true }
+version = "4.0.0"
 authors = { workspace = true }
 repository = { workspace = true }
 homepage = { workspace = true }
