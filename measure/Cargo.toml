@@ -2,7 +2,7 @@
 name = "solana-svm-measure"
 description = "Timing measurement utilities for SVM"
 documentation = "https://docs.rs/solana-svm-measure"
-version = { workspace = true }
+version = "4.0.0"
 authors = { workspace = true }
 repository = { workspace = true }
 homepage = { workspace = true }

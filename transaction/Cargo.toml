@@ -2,7 +2,7 @@
 name = "solana-svm-transaction"
 description = "Solana SVM Transaction"
 documentation = "https://docs.rs/solana-svm-transaction"
-version = { workspace = true }
+version = "4.0.0"
 authors = { workspace = true }
 repository = { workspace = true }
 homepage = { workspace = true }

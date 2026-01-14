@@ -2,7 +2,7 @@
 name = "solana-svm-rent-calculator"
 description = "Solana SVM Rent Calculator"
 documentation = "https://docs.rs/solana-svm-rent-calculator"
-version = { workspace = true }
+version = "4.0.0"
 authors = { workspace = true }
 repository = { workspace = true }
 homepage = { workspace = true }
