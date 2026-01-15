@@ -151,7 +151,6 @@ solana-sbf-rust-invoked-dep = { path = "rust/invoked_dep", version = "=4.0.0" }
 solana-sbf-rust-many-args-dep = { path = "rust/many_args_dep", version = "=4.0.0" }
 solana-sbf-rust-mem-dep = { path = "rust/mem_dep", version = "=4.0.0" }
 solana-sbf-rust-param-passing-dep = { path = "rust/param_passing_dep", version = "=4.0.0" }
-solana-sbf-rust-r2-instruction-data-pointer = { path = "rust/r2_instruction_data_pointer", version = "=4.0.0" }
 solana-sbf-rust-realloc-dep = { path = "rust/realloc_dep", version = "=4.0.0" }
 solana-sbf-rust-realloc-invoke-dep = { path = "rust/realloc_invoke_dep", version = "=4.0.0" }
 solana-sbpf = "=0.13.1"
