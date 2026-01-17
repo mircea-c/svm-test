@@ -263,6 +263,82 @@ dependencies = [
 ]
 
 [[package]]
+name = "agave-syscalls"
+version = "4.0.0"
+dependencies = [
+ "bincode",
+ "libsecp256k1 0.6.0",
+ "num-traits",
+ "solana-account",
+ "solana-account-info",
+ "solana-big-mod-exp",
+ "solana-blake3-hasher",
+ "solana-bn254",
+ "solana-clock",
+ "solana-cpi",
+ "solana-curve25519 4.0.0",
+ "solana-hash 4.0.1",
+ "solana-instruction",
+ "solana-keccak-hasher",
+ "solana-poseidon 4.0.0",
+ "solana-program-entrypoint",
+ "solana-program-runtime 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-pubkey 4.0.0",
+ "solana-sbpf",
+ "solana-sdk-ids",
+ "solana-secp256k1-recover",
+ "solana-sha256-hasher",
+ "solana-stable-layout",
+ "solana-stake-interface",
+ "solana-svm-feature-set 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-log-collector 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-type-overrides 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-sysvar",
+ "solana-sysvar-id",
+ "solana-transaction-context 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "thiserror 2.0.17",
+]
+
+[[package]]
+name = "agave-syscalls"
+version = "4.0.0"
+source = "sparse+http://91.242.214.51:8000/api/v1/crates/"
+checksum = "f4ccf4047b74fce568b0de113f80f99c82d64e99a9c0b85cb4dbb2d57fd7fe13"
+dependencies = [
+ "bincode",
+ "libsecp256k1 0.6.0",
+ "num-traits",
+ "solana-account",
+ "solana-account-info",
+ "solana-big-mod-exp",
+ "solana-blake3-hasher",
+ "solana-bn254",
+ "solana-clock",
+ "solana-cpi",
+ "solana-curve25519 4.0.0",
+ "solana-hash 4.0.1",
+ "solana-instruction",
+ "solana-keccak-hasher",
+ "solana-poseidon 4.0.0",
+ "solana-program-entrypoint",
+ "solana-program-runtime 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-pubkey 4.0.0",
+ "solana-sbpf",
+ "solana-sdk-ids",
+ "solana-secp256k1-recover",
+ "solana-sha256-hasher",
+ "solana-stable-layout",
+ "solana-stake-interface",
+ "solana-svm-feature-set 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-log-collector 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-type-overrides 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-sysvar",
+ "solana-sysvar-id",
+ "solana-transaction-context 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "thiserror 2.0.17",
+]
+
+[[package]]
 name = "agave-transaction-view"
 version = "3.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1201,7 +1277,7 @@ dependencies = [
  "bitflags 2.10.0",
  "cexpr",
  "clang-sys",
- "itertools 0.13.0",
+ "itertools 0.12.1",
  "proc-macro2",
  "quote",
  "regex",
@@ -6429,16 +6505,16 @@ dependencies = [
 
 [[package]]
 name = "solana-bn254"
-version = "3.1.2"
+version = "3.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8d08583be08d2d5f19aa21efbb6fbdb968ba7fd0de74562441437a7d776772bf"
+checksum = "62ff13a8867fcc7b0f1114764e1bf6191b4551dcaf93729ddc676cd4ec6abc9f"
 dependencies = [
- "ark-bn254 0.4.0",
- "ark-ec 0.4.2",
- "ark-ff 0.4.2",
- "ark-serialize 0.4.2",
+ "ark-bn254 0.5.0",
+ "ark-ec 0.5.0",
+ "ark-ff 0.5.0",
+ "ark-serialize 0.5.0",
  "bytemuck",
- "solana-define-syscall 3.0.0",
+ "solana-define-syscall 5.0.0",
  "thiserror 2.0.17",
 ]
 
@@ -6457,7 +6533,7 @@ version = "3.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "31e9e9ecfbcdab74fa1cb71d96acaefdcf121f72216679b8e442d6706b04041c"
 dependencies = [
- "agave-syscalls",
+ "agave-syscalls 3.1.6",
  "bincode",
  "qualifier_attr",
  "solana-account",
@@ -6484,7 +6560,7 @@ dependencies = [
 name = "solana-bpf-loader-program"
 version = "4.0.0"
 dependencies = [
- "agave-syscalls",
+ "agave-syscalls 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
  "bincode",
  "cfg-if 1.0.4",
  "qualifier_attr",
@@ -6496,16 +6572,44 @@ dependencies = [
  "solana-loader-v4-interface",
  "solana-packet 4.0.0",
  "solana-program-entrypoint",
- "solana-program-runtime 4.0.0",
+ "solana-program-runtime 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
  "solana-pubkey 4.0.0",
  "solana-sbpf",
  "solana-sdk-ids",
- "solana-svm-feature-set 4.0.0",
- "solana-svm-log-collector 4.0.0",
- "solana-svm-measure 4.0.0",
- "solana-svm-type-overrides 4.0.0",
+ "solana-svm-log-collector 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-measure 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-type-overrides 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
  "solana-system-interface 3.0.0",
- "solana-transaction-context 4.0.0",
+ "solana-transaction-context 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+]
+
+[[package]]
+name = "solana-bpf-loader-program"
+version = "4.0.0"
+source = "sparse+http://91.242.214.51:8000/api/v1/crates/"
+checksum = "152436ace0a66b53de3fbef51f76114dd1e1bcf383274d2999b3fc7d8e5fc62b"
+dependencies = [
+ "agave-syscalls 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "bincode",
+ "cfg-if 1.0.4",
+ "qualifier_attr",
+ "solana-account",
+ "solana-bincode",
+ "solana-clock",
+ "solana-instruction",
+ "solana-loader-v3-interface",
+ "solana-loader-v4-interface",
+ "solana-packet 4.0.0",
+ "solana-program-entrypoint",
+ "solana-program-runtime 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-pubkey 4.0.0",
+ "solana-sbpf",
+ "solana-sdk-ids",
+ "solana-svm-log-collector 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-measure 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-type-overrides 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-system-interface 3.0.0",
+ "solana-transaction-context 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
 ]
 
 [[package]]
@@ -7799,23 +7903,25 @@ dependencies = [
 [[package]]
 name = "solana-loader-v4-program"
 version = "4.0.0"
+source = "sparse+http://91.242.214.51:8000/api/v1/crates/"
+checksum = "7d3a0bda2061e7fb38c61df2c7d304d861b5bf6fec313d37cc898966b2b3f9c5"
 dependencies = [
  "log",
  "solana-account",
  "solana-bincode",
- "solana-bpf-loader-program 4.0.0",
+ "solana-bpf-loader-program 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
  "solana-instruction",
  "solana-loader-v3-interface",
  "solana-loader-v4-interface",
  "solana-packet 4.0.0",
- "solana-program-runtime 4.0.0",
+ "solana-program-runtime 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
  "solana-pubkey 4.0.0",
  "solana-sbpf",
  "solana-sdk-ids",
- "solana-svm-log-collector 4.0.0",
- "solana-svm-measure 4.0.0",
- "solana-svm-type-overrides 4.0.0",
- "solana-transaction-context 4.0.0",
+ "solana-svm-log-collector 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-measure 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-type-overrides 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-transaction-context 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
 ]
 
 [[package]]
@@ -8280,17 +8386,62 @@ dependencies = [
  "solana-slot-hashes",
  "solana-stable-layout",
  "solana-stake-interface",
- "solana-svm-callback 4.0.0",
- "solana-svm-feature-set 4.0.0",
- "solana-svm-log-collector 4.0.0",
- "solana-svm-measure 4.0.0",
- "solana-svm-timings 4.0.0",
- "solana-svm-transaction 4.0.0",
- "solana-svm-type-overrides 4.0.0",
+ "solana-svm-callback 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-feature-set 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-log-collector 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-measure 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-timings 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-transaction 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-type-overrides 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
  "solana-system-interface 3.0.0",
  "solana-sysvar",
  "solana-sysvar-id",
- "solana-transaction-context 4.0.0",
+ "solana-transaction-context 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "thiserror 2.0.17",
+]
+
+[[package]]
+name = "solana-program-runtime"
+version = "4.0.0"
+source = "sparse+http://91.242.214.51:8000/api/v1/crates/"
+checksum = "cc1a516bccd18b0cb19594f319519cf50c473a6b8df8fa117cc88a594471f68e"
+dependencies = [
+ "base64 0.22.1",
+ "bincode",
+ "itertools 0.14.0",
+ "log",
+ "percentage",
+ "rand 0.9.2",
+ "serde",
+ "solana-account",
+ "solana-account-info",
+ "solana-clock",
+ "solana-epoch-rewards",
+ "solana-epoch-schedule",
+ "solana-fee-structure",
+ "solana-hash 4.0.1",
+ "solana-instruction",
+ "solana-last-restart-slot",
+ "solana-loader-v3-interface",
+ "solana-program-entrypoint",
+ "solana-pubkey 4.0.0",
+ "solana-rent",
+ "solana-sbpf",
+ "solana-sdk-ids",
+ "solana-slot-hashes",
+ "solana-stable-layout",
+ "solana-stake-interface",
+ "solana-svm-callback 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-feature-set 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-log-collector 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-measure 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-timings 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-transaction 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-type-overrides 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-system-interface 3.0.0",
+ "solana-sysvar",
+ "solana-sysvar-id",
+ "solana-transaction-context 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
  "thiserror 2.0.17",
 ]
 
@@ -8701,7 +8852,7 @@ dependencies = [
  "agave-precompiles",
  "agave-reserved-account-keys",
  "agave-snapshots",
- "agave-syscalls",
+ "agave-syscalls 3.1.6",
  "agave-votor-messages",
  "ahash 0.8.12",
  "aquamarine",
@@ -8863,7 +9014,7 @@ dependencies = [
  "agave-feature-set",
  "agave-logger",
  "agave-reserved-account-keys",
- "agave-syscalls",
+ "agave-syscalls 4.0.0",
  "agave-validator",
  "bincode",
  "borsh",
@@ -10073,20 +10224,20 @@ dependencies = [
  "solana-nonce-account",
  "solana-program-entrypoint",
  "solana-program-pack",
- "solana-program-runtime 4.0.0",
+ "solana-program-runtime 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
  "solana-pubkey 4.0.0",
  "solana-rent",
  "solana-sdk-ids",
- "solana-svm-callback 4.0.0",
- "solana-svm-feature-set 4.0.0",
- "solana-svm-log-collector 4.0.0",
- "solana-svm-measure 4.0.0",
- "solana-svm-timings 4.0.0",
- "solana-svm-transaction 4.0.0",
- "solana-svm-type-overrides 4.0.0",
+ "solana-svm-callback 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-feature-set 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-log-collector 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-measure 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-timings 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-transaction 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
+ "solana-svm-type-overrides 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
  "solana-system-interface 3.0.0",
  "solana-sysvar-id",
- "solana-transaction-context 4.0.0",
+ "solana-transaction-context 4.0.0 (sparse+http://91.242.214.51:8000/api/v1/crates/)",
  "solana-transaction-error",
  "spl-generic-token",
  "thiserror 2.0.17",
@@ -10115,6 +10266,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "solana-svm-callback"
+version = "4.0.0"
+source = "sparse+http://91.242.214.51:8000/api/v1/crates/"
+checksum = "f75bd0c05eccc178a1fd683b256525c2771e3d5cb5decd6f69edafea801f7e39"
+dependencies = [
+ "solana-account",
+ "solana-clock",
+ "solana-precompile-error",
+ "solana-pubkey 4.0.0",
+]
+
+[[package]]
 name = "solana-svm-feature-set"
 version = "3.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -10123,6 +10286,12 @@ checksum = "bb4a59053cd2bbee5e85476739707f5030a089457c4140340960260e7aedc2a0"
 [[package]]
 name = "solana-svm-feature-set"
 version = "4.0.0"
+
+[[package]]
+name = "solana-svm-feature-set"
+version = "4.0.0"
+source = "sparse+http://91.242.214.51:8000/api/v1/crates/"
+checksum = "36a70d293a4c80e65aaac2ebf95cef30288a6bf9294c92adf972f1abe3d9a32f"
 
 [[package]]
 name = "solana-svm-log-collector"
@@ -10141,6 +10310,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "solana-svm-log-collector"
+version = "4.0.0"
+source = "sparse+http://91.242.214.51:8000/api/v1/crates/"
+checksum = "e2f4f609d72ec570ee4a4823081454ecddc6ecc35421335d9d3ce9613af275fa"
+dependencies = [
+ "log",
+]
+
+[[package]]
 name = "solana-svm-measure"
 version = "3.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -10149,6 +10327,12 @@ checksum = "55976a874cc3c07e0b1ec2a1177ec420c5608f61a8735c44aef1ca7c73b829d8"
 [[package]]
 name = "solana-svm-measure"
 version = "4.0.0"
+
+[[package]]
+name = "solana-svm-measure"
+version = "4.0.0"
+source = "sparse+http://91.242.214.51:8000/api/v1/crates/"
+checksum = "4067122c2f0f65ed755c82c1513880112b78a0e207322a2f8c46d56be93a9b94"
 
 [[package]]
 name = "solana-svm-test-harness-fixture"
@@ -10169,7 +10353,7 @@ dependencies = [
  "agave-feature-set",
  "agave-logger",
  "agave-precompiles",
- "agave-syscalls",
+ "agave-syscalls 4.0.0",
  "bincode",
  "solana-account",
  "solana-builtins",
@@ -10216,6 +10400,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "solana-svm-timings"
+version = "4.0.0"
+source = "sparse+http://91.242.214.51:8000/api/v1/crates/"
+checksum = "4b668dc4ed5dc58f74a5b771c7551413fdf51c704753daa7c21555093d87ff2f"
+dependencies = [
+ "eager",
+ "enum-iterator 2.3.0",
+ "solana-pubkey 4.0.0",
+]
+
+[[package]]
 name = "solana-svm-transaction"
 version = "3.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -10242,6 +10437,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "solana-svm-transaction"
+version = "4.0.0"
+source = "sparse+http://91.242.214.51:8000/api/v1/crates/"
+checksum = "e3d6632f09d7e36bcb9d9d90fd4ae4d4bd06b39c6ce7aed75f45041b66a2504b"
+dependencies = [
+ "solana-hash 4.0.1",
+ "solana-message",
+ "solana-pubkey 4.0.0",
+ "solana-sdk-ids",
+ "solana-signature",
+ "solana-transaction",
+]
+
+[[package]]
 name = "solana-svm-type-overrides"
 version = "3.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -10253,6 +10462,15 @@ dependencies = [
 [[package]]
 name = "solana-svm-type-overrides"
 version = "4.0.0"
+dependencies = [
+ "rand 0.9.2",
+]
+
+[[package]]
+name = "solana-svm-type-overrides"
+version = "4.0.0"
+source = "sparse+http://91.242.214.51:8000/api/v1/crates/"
+checksum = "5714617eee74ae35f6f6f8a58c8fa1fd31192b08a1228a7fe64e86df8937d5a4"
 dependencies = [
  "rand 0.9.2",
 ]
@@ -10549,6 +10767,23 @@ version = "4.0.0"
 dependencies = [
  "bincode",
  "qualifier_attr",
+ "serde",
+ "solana-account",
+ "solana-instruction",
+ "solana-instructions-sysvar",
+ "solana-pubkey 4.0.0",
+ "solana-rent",
+ "solana-sbpf",
+ "solana-sdk-ids",
+]
+
+[[package]]
+name = "solana-transaction-context"
+version = "4.0.0"
+source = "sparse+http://91.242.214.51:8000/api/v1/crates/"
+checksum = "6917aef1014adf7463b711b0f2916305ec937d393c7fa1b34252bd11323b8090"
+dependencies = [
+ "bincode",
  "serde",
  "solana-account",
  "solana-instruction",

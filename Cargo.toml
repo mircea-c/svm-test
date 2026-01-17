@@ -8,10 +8,11 @@ members = [
     "program-runtime",
     "programs/bpf_loader",
     "programs/loader-v4",
-    "rent-calculator",
     "svm",
     "syscalls",
     "test-harness",
+    "test-harness/fixture",
+    "test-harness/instr",
     "timings",
     "transaction",
     "transaction-context",
@@ -71,7 +72,7 @@ agave-feature-set = "3.1.6"
 agave-logger = "3.1.6"
 agave-precompiles = "3.1.6"
 agave-reserved-account-keys = "3.1.6"
-agave-syscalls = { path = "syscalls", features = ["agave-unstable-api"] }
+agave-syscalls = { path = "syscalls", version = "4.0.0", features = ["agave-unstable-api"] }
 agave-validator = "3.1.6"
 ahash = "0.8.11"
 assert_matches = "1.5.0"
@@ -109,7 +110,7 @@ shuttle = "0.7.1"
 solana-account = "3.3.0"
 solana-account-info = "3.1.0"
 solana-bincode = "3.1.0"
-solana-bpf-loader-program = { path = "programs/bpf_loader", features = ["agave-unstable-api"] }
+solana-bpf-loader-program = { path = "programs/bpf_loader", version = "4.0.0", features = ["agave-unstable-api"] }
 solana-builtins = "3.1.6"
 solana-clock = "3.0.0"
 solana-cluster-type = "3.0.0"
@@ -131,9 +132,8 @@ solana-keypair = "3.0.0"
 solana-last-restart-slot = "3.0.0"
 solana-loader-v3-interface = "6.1.0"
 solana-loader-v4-interface = "3.1.0"
-solana-loader-v4-program = { path = "programs/loader-v4", features = ["agave-unstable-api"] }
+solana-loader-v4-program = { path = "programs/loader-v4", version = "4.0.0", features = ["agave-unstable-api"] }
 solana-message = "3.0.1"
-solana-metrics = { path = "metrics", features = ["agave-unstable-api"] }
 solana-native-token = "3.0.0"
 solana-nonce = "3.0.0"
 solana-nonce-account = "3.0.0"
@@ -143,7 +143,7 @@ solana-program = "3.0.0"
 solana-program-binaries = "3.1.6"
 solana-program-entrypoint = "3.1.1"
 solana-program-pack = "3.0.0"
-solana-program-runtime = { path = "program-runtime", features = ["agave-unstable-api"] }
+solana-program-runtime = { path = "program-runtime", version = "4.0.0", features = ["agave-unstable-api"] }
 solana-pubkey = "4.0.0"
 solana-rent = "3.1.0"
 solana-sbpf = { version = "0.13.1", default-features = false }
@@ -156,16 +156,17 @@ solana-signer = "3.0.0"
 solana-slot-hashes = "3.0.0"
 solana-stable-layout = "3.0.0"
 solana-stake-interface = "2.0.2"
-solana-svm = { path = "svm" }
-solana-svm-callback = { path = "callback", features = ["agave-unstable-api"] }
-solana-svm-feature-set = { path = "feature-set", features = ["agave-unstable-api"] }
-solana-svm-log-collector = { path = "log-collector", features = ["agave-unstable-api"] }
-solana-svm-measure = { path = "measure", features = ["agave-unstable-api"] }
-solana-svm-test-harness-fixture = { path = "test-harness/fixture" }
-solana-svm-test-harness-instr = { path = "test-harness/instr" }
-solana-svm-timings = { path = "timings", features = ["agave-unstable-api"] }
-solana-svm-transaction = { path = "transaction", features = ["agave-unstable-api"] }
-solana-svm-type-overrides = { path = "type-overrides", features = ["agave-unstable-api"] }
+solana-svm = { path = "svm", version = "4.0.0" }
+solana-svm-callback = { path = "callback", version = "4.0.0", features = ["agave-unstable-api"] }
+solana-svm-feature-set = { path = "feature-set", version = "4.0.0", features = ["agave-unstable-api"] }
+solana-svm-log-collector = { path = "log-collector", version = "4.0.0", features = ["agave-unstable-api"] }
+solana-svm-measure = { path = "measure", version = "4.0.0", features = ["agave-unstable-api"] }
+solana-svm-metrics = { path = "metrics", version = "4.0.0", features = ["agave-unstable-api"] }
+solana-svm-test-harness-fixture = { path = "test-harness/fixture", version = "4.0.0" }
+solana-svm-test-harness-instr = { path = "test-harness/instr", version = "4.0.0" }
+solana-svm-timings = { path = "timings", version = "4.0.0", features = ["agave-unstable-api"] }
+solana-svm-transaction = { path = "transaction", version = "4.0.0", features = ["agave-unstable-api"] }
+solana-svm-type-overrides = { path = "type-overrides", version = "4.0.0", features = ["agave-unstable-api"] }
 solana-system-interface = { version = "3.0.0", features = ["bincode"] }
 solana-system-program = "3.1.0"
 solana-system-transaction = "3.0.0"
@@ -173,7 +174,7 @@ solana-sysvar = "3.1.1"
 solana-sysvar-id = "3.0.0"
 solana-time-utils = "3.0.0"
 solana-transaction = "3.0.2"
-solana-transaction-context = { path = "transaction-context", features = ["agave-unstable-api"] }
+solana-transaction-context = { path = "transaction-context", version = "4.0.0", features = ["agave-unstable-api"] }
 solana-transaction-error = "3.0.0"
 spl-generic-token = "2.0.1"
 spl-token-interface = "2.0.0"
@@ -185,6 +186,11 @@ thiserror = "2.0.17"
 agave-syscalls = { path = "syscalls" }
 solana-svm-feature-set = { path = "feature-set" }
 solana-program-runtime = { path = "program-runtime" }
+solana-svm-callback = { path = "callback" }
+
+[patch.kellnr]
+solana-svm-callback = { path = "callback" }
+solana-loader-v4-program = { path = "programs/loader-v4" }
 
 [profile.release-with-debug]
 inherits = "release"

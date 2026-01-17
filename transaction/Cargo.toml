@@ -2,12 +2,13 @@
 name = "solana-svm-transaction"
 description = "Solana SVM Transaction"
 documentation = "https://docs.rs/solana-svm-transaction"
-version = "4.0.0"
+version = { workspace = true }
 authors = { workspace = true }
 repository = { workspace = true }
 homepage = { workspace = true }
 license = { workspace = true }
 edition = "2024"
+publish = ["kellnr"]
 
 [features]
 agave-unstable-api = []

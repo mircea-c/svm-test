@@ -2,12 +2,13 @@
 name = "solana-svm-timings"
 description = "Solana Execution Timings"
 documentation = "https://docs.rs/solana-svm-timings"
-version = "4.0.0"
+version = { workspace = true }
 authors = { workspace = true }
 repository = { workspace = true }
 homepage = { workspace = true }
 license = { workspace = true }
 edition = { workspace = true }
+publish = ["kellnr"]
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
