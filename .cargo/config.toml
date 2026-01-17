@@ -1,0 +1,4 @@
+[registries.kellnr]
+index = "sparse+http://91.242.214.51:8000/api/v1/crates/"
+credential-provider = ["cargo:token"]
+token = "Zy9HhJ02RJmg0GCrgLfaCVfU6IwDfhXD"

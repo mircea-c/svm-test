@@ -2,12 +2,13 @@
 name = "solana-transaction-context"
 description = "Solana data shared between program runtime and built-in programs as well as SBF programs."
 documentation = "https://docs.rs/solana-transaction-context"
-version = "4.0.0"
+version = { workspace = true }
 authors = { workspace = true }
 repository = { workspace = true }
 homepage = { workspace = true }
 license = { workspace = true }
 edition = "2024"
+publish = ["kellnr"]
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]

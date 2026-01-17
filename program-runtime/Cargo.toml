@@ -2,12 +2,13 @@
 name = "solana-program-runtime"
 description = "Solana program runtime"
 documentation = "https://docs.rs/solana-program-runtime"
-version = "4.0.0"
+version = { workspace = true }
 authors = { workspace = true }
 repository = { workspace = true }
 homepage = { workspace = true }
 license = { workspace = true }
 edition = "2024"
+publish = ["kellnr"]
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
@@ -56,17 +57,17 @@ solana-sdk-ids = { workspace = true }
 solana-slot-hashes = { workspace = true }
 solana-stable-layout = { workspace = true }
 solana-stake-interface = { workspace = true, features = ["bincode", "sysvar"] }
-solana-svm-callback = { workspace = true }
-solana-svm-feature-set = { workspace = true }
-solana-svm-log-collector = { workspace = true }
-solana-svm-measure = { workspace = true }
-solana-svm-timings = { workspace = true }
-solana-svm-transaction = { workspace = true }
-solana-svm-type-overrides = { workspace = true }
+solana-svm-callback = { registry = "kellnr", version = "4.0.0" }
+solana-svm-feature-set = { registry = "kellnr", version = "4.0.0" }
+solana-svm-log-collector = { registry = "kellnr", version = "4.0.0" }
+solana-svm-measure = { registry = "kellnr", version = "4.0.0" }
+solana-svm-timings = { registry = "kellnr", version = "4.0.0" }
+solana-svm-transaction = { registry = "kellnr", version = "4.0.0" }
+solana-svm-type-overrides = { registry = "kellnr", version = "4.0.0" }
 solana-system-interface = { workspace = true }
 solana-sysvar = { workspace = true, features = ["bincode"] }
 solana-sysvar-id = { workspace = true }
-solana-transaction-context = { workspace = true }
+solana-transaction-context = { registry = "kellnr", version = "4.0.0" }
 thiserror = { workspace = true }
 
 [dev-dependencies]
@@ -79,7 +80,7 @@ solana-program-runtime = { path = ".", features = ["dev-context-only-utils"] }
 solana-pubkey = { workspace = true, features = ["rand"] }
 solana-signer = { workspace = true }
 solana-transaction = { workspace = true, features = ["dev-context-only-utils"] }
-solana-transaction-context = { workspace = true, features = [
+solana-transaction-context = { registry = "kellnr", version = "4.0.0", features = [
     "dev-context-only-utils",
 ] }
 test-case = { workspace = true }
